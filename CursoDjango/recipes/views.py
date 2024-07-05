@@ -6,10 +6,12 @@ from django.http import HttpResponse
 #HTTP REQUEST
 
 def home(request):
-    return render(request,'recipes/home.html')
+    return render(request,'recipes/home.html', context={
+        'name': 'Carlos Eduardo'
+    })
 
 def contato(request):
-    return HttpResponse('CONTATO')
+    return render(request, 'recipes/contato.html')
 
 def sobre(request):
-    return HttpResponse('SOBRE')
+    return render(request, 'recipes/sobre.html')
