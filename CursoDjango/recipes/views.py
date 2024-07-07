@@ -10,8 +10,7 @@ def home(request):
         'name': 'Carlos Eduardo'
     })
 
-def contato(request):
-    return render(request, 'recipes/contato.html')
-
-def sobre(request):
-    return render(request, 'recipes/sobre.html')
+def recipe(request, id):
+    return render(request,'recipes/pages/recipe-view.html', context={
+        'name': 'Carlos Eduardo'
+    })
